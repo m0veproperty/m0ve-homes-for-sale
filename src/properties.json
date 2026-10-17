@@ -30,7 +30,10 @@
     "features": [
       "Tenure: Freehold"
     ],
-    "date": "09 July 2025"
+    "date": "09 July 2025",
+    "estimate": 460000,
+    "score": 10,
+    "agentLogo": "https://s3-eu-west-1.amazonaws.com/images.agentsmutual.co.uk/agents/companies/13886/240618092744493/logo-original.png"
   },
   {
     "id": 26517,
@@ -63,7 +66,10 @@
     "features": [
       "Tenure: Freehold"
     ],
-    "date": "09 July 2025"
+    "date": "09 July 2025",
+    "estimate": 460000,
+    "score": 10,
+    "agentLogo": "https://s3-eu-west-1.amazonaws.com/images.agentsmutual.co.uk/agents/companies/13886/240618092744493/logo-original.png"
   },
   {
     "id": 26518,
@@ -102,7 +108,10 @@
       "Two bathrooms",
       "Close to Warwick University"
     ],
-    "date": "09 July 2025"
+    "date": "09 July 2025",
+    "estimate": 172000,
+    "score": 2.6,
+    "agentLogo": "https://s3-eu-west-1.amazonaws.com/images.agentsmutual.co.uk/agents/companies/12991/240228153846337/logo-original.png"
   },
   {
     "id": 26513,
@@ -138,7 +147,10 @@
       "Master En-Suite",
       "Downstairs W.C"
     ],
-    "date": "09 July 2025"
+    "date": "09 July 2025",
+    "estimate": 179000,
+    "score": 2.5,
+    "agentLogo": "https://s3-eu-west-1.amazonaws.com/images.agentsmutual.co.uk/agents/companies/12141/240430150019400/logo-original.jpg"
   },
   {
     "id": 26144,
@@ -181,7 +193,10 @@
       "No chain",
       "EPC- C"
     ],
-    "date": "07 July 2025"
+    "date": "07 July 2025",
+    "estimate": 407000,
+    "score": 8.5,
+    "agentLogo": "https://s3-eu-west-1.amazonaws.com/images.agentsmutual.co.uk/agents/companies/2018/190412143316754/logo-original.png"
   },
   {
     "id": 26145,
@@ -224,7 +239,10 @@
       "Scope to improve",
       "EPC-"
     ],
-    "date": "07 July 2025"
+    "date": "07 July 2025",
+    "estimate": 184000,
+    "score": 5.6,
+    "agentLogo": "https://s3-eu-west-1.amazonaws.com/images.agentsmutual.co.uk/agents/companies/2018/190412143316754/logo-original.png"
   },
   {
     "id": 26146,
@@ -267,7 +285,10 @@
       "Generous Rear and Side Garden",
       "EPC - C"
     ],
-    "date": "07 July 2025"
+    "date": "07 July 2025",
+    "estimate": 557000,
+    "score": 6.5,
+    "agentLogo": "https://s3-eu-west-1.amazonaws.com/images.agentsmutual.co.uk/agents/companies/2018/190412143316754/logo-original.png"
   },
   {
     "id": 26147,
@@ -310,7 +331,10 @@
       "Call us now to arrange a viewing",
       "EPC - TBC"
     ],
-    "date": "07 July 2025"
+    "date": "07 July 2025",
+    "estimate": 357000,
+    "score": 9.3,
+    "agentLogo": "https://s3-eu-west-1.amazonaws.com/images.agentsmutual.co.uk/agents/companies/2018/190412143316754/logo-original.png"
   },
   {
     "id": 26148,
@@ -351,7 +375,10 @@
       "Call us now to arrange a viewing",
       "EPC - TBC"
     ],
-    "date": "07 July 2025"
+    "date": "07 July 2025",
+    "estimate": 237000,
+    "score": 6,
+    "agentLogo": "https://s3-eu-west-1.amazonaws.com/images.agentsmutual.co.uk/agents/companies/2018/190412143316754/logo-original.png"
   },
   {
     "id": 26134,
@@ -390,7 +417,10 @@
       "Well Maintained Throughout",
       "Great Investment"
     ],
-    "date": "07 July 2025"
+    "date": "07 July 2025",
+    "estimate": 191000,
+    "score": 1,
+    "agentLogo": "https://s3-eu-west-1.amazonaws.com/images.agentsmutual.co.uk/agents/companies/12888/231031110317329/logo-original.png"
   },
   {
     "id": 26136,
@@ -433,7 +463,10 @@
       "Call to arrange a viewing",
       "EPC - B"
     ],
-    "date": "07 July 2025"
+    "date": "07 July 2025",
+    "estimate": 195000,
+    "score": 1,
+    "agentLogo": "https://s3-eu-west-1.amazonaws.com/images.agentsmutual.co.uk/agents/companies/2018/190412143316754/logo-original.png"
   },
   {
     "id": 26140,
@@ -476,7 +509,10 @@
       "Close To Warwick University And Business Park",
       "Coventry City council Tax Band F"
     ],
-    "date": "07 July 2025"
+    "date": "07 July 2025",
+    "estimate": 717000,
+    "score": 7.4,
+    "agentLogo": "https://s3-eu-west-1.amazonaws.com/images.agentsmutual.co.uk/agents/branches/461/150601131332253/logo-original.png"
   },
   {
     "id": 24199,
@@ -519,6 +555,9 @@
       "Council tax band: g",
       "EPC RATING BAND A"
     ],
-    "date": "04 July 2025"
+    "date": "04 July 2025",
+    "estimate": null,
+    "score": null,
+    "agentLogo": "https://s3-eu-west-1.amazonaws.com/images.agentsmutual.co.uk/agents/branches/42518/231010102349004/logo-original.png"
   }
 ]
