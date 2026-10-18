@@ -52,7 +52,7 @@
   // Observe only changing content regions; leave controls and focus in place.
   const regions = document.querySelectorAll('[role="tabpanel"],.detail-note,.evidence-reading,.blueprint-caption,.place-picker,.place-card>p,#local-copy,#home-guide-copy,.area-story,.world-copy,.comparison-result,.district-feature,.home-detail,#form-content,#chart-value,#area-description');
   regions.forEach(el => {
-    new MutationObserver(() => reveal(el)).observe(el,{childList:true,subtree:true,characterData:true,attributes:el.matches('[role="tabpanel"]'),attributeFilter:['hidden','aria-hidden']});
+    new MutationObserver(() => reveal(el)).observe(el,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:['hidden','aria-hidden']});
   });
   const disclosureState = new WeakMap();
   document.querySelectorAll('details').forEach(el => {
