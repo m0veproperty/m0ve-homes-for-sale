@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-18T21:48:07.627357+00:00",
+  "title": "Design System: M0VE \u2014 Homes for sale",
+  "extensions": {
+    "shadows": [
+      {
+        "name": "mobile-navigation",
+        "value": "0 18px 30px #15334512"
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile-navigation",
+        "value": "900px"
+      },
+      {
+        "name": "small-screen",
+        "value": "600px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Header action",
+      "kind": "button",
+      "description": "Extracted shared M0VE styling; page-specific rules remain in the project styles.",
+      "html": "<button class=\"ds-action\">Value my home</button>",
+      "css": ".ds-action{background:var(--m-purple,#6945c5);color:#fff;border:0;border-radius:10px;min-height:44px;padding:12px 18px;font:600 13px \"M0VE Sans\",Arial,sans-serif}.ds-action:active{transform:translateY(1px)}.ds-action:focus-visible{outline:3px solid var(--m-purple,#6945c5);outline-offset:4px}",
+      "refersTo": "header-action"
+    },
+    {
+      "name": "Text field",
+      "kind": "input",
+      "description": "Extracted shared M0VE styling; page-specific rules remain in the project styles.",
+      "html": "<input class=\"ds-input\" aria-label=\"Location\" placeholder=\"Enter a location\">",
+      "css": ".ds-input{font-family:\"M0VE Sans\",Arial,sans-serif;font-size:16px;caret-color:var(--m-purple,#6945c5)}.ds-input::placeholder{color:#64717b;opacity:1}.ds-input:focus-visible{outline:3px solid var(--m-purple,#6945c5);outline-offset:4px}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Extracted shared M0VE styling; page-specific rules remain in the project styles.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#home\" aria-current=\"page\">Home</a><a href=\"#explore\">Explore</a></nav>",
+      "css": ".ds-nav{display:flex;gap:26px;font:13px \"M0VE Sans\",Arial,sans-serif}.ds-nav a{color:var(--m-muted,#536570);padding-block:10px;line-height:1.4}.ds-nav a[aria-current=page]{color:var(--m-purple,#6945c5)}.ds-nav a:focus-visible{outline:3px solid var(--m-purple,#6945c5);outline-offset:4px}"
+    },
+    {
+      "name": "Menu trigger",
+      "kind": "button",
+      "description": "Extracted shared M0VE styling; page-specific rules remain in the project styles.",
+      "html": "<button class=\"ds-menu\" aria-label=\"Open navigation\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 6h16M4 12h16M4 18h16\"/></svg></button>",
+      "css": ".ds-menu{background:none;border:1px solid var(--m-line,#d9dce0);border-radius:9px;min-width:44px;min-height:44px;color:var(--m-ink,#153345)}.ds-menu svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7}.ds-menu:focus-visible{outline:3px solid var(--m-purple,#6945c5);outline-offset:4px}"
+    },
+    {
+      "name": "Section link",
+      "kind": "nav",
+      "description": "Extracted shared M0VE styling; page-specific rules remain in the project styles.",
+      "html": "<a class=\"ds-section\" href=\"#evidence\">Market evidence</a>",
+      "css": ".ds-section{display:inline-flex;align-items:center;min-height:48px;font:13px \"M0VE Sans\",Arial,sans-serif;white-space:nowrap;background:var(--m-paper,#faf8f3);color:var(--m-ink,#153345)}.ds-section:focus-visible{outline:3px solid var(--m-purple,#6945c5);outline-offset:4px}"
+    }
+  ],
+  "narrative": {
+    "overview": "Warm paper, navy evidence and purple actions unify the existing property imagery and atlas compositions. Georgia headlines provide an editorial voice; Manrope keeps controls and data legible.",
+    "dos": [
+      "Do preserve the existing imagery, atlas forms, interactions and factual caveats.",
+      "Do keep keyboard focus visible and respect reduced-motion preferences."
+    ],
+    "donts": [
+      "Don't treat the shared type sizes as universal: small labels and chart annotations retain documented exceptions.",
+      "Don't substitute decorative shadows for the existing paper, border and tonal hierarchy."
+    ]
+  }
+}
