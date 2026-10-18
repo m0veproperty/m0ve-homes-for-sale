@@ -1,0 +1,280 @@
+/* M0VE / shared interface system — 2026-10. Owned font served by the listings project. */
+@font-face{font-family:'M0VE Sans';src:url('https://m0ve-homes-for-sale.vercel.app/manrope.woff2') format('woff2');font-weight:200 800;font-style:normal;font-display:swap}
+:root{--m-paper:#faf8f3;--m-ink:#153345;--m-muted:#536570;--m-purple:#6945c5;--m-soft:#eee8f8;--m-line:#d9dce0;--m-serif:Georgia,'Times New Roman',serif;--m-sans:'M0VE Sans',Arial,sans-serif}
+body[data-m0ve-page]{--paper:var(--m-paper);--ink:var(--m-ink);--navy:var(--m-ink);--forest:var(--m-ink);--muted:var(--m-muted);--purple:var(--m-purple);--accent:var(--m-purple);--accent-dark:#51339d;--rust:var(--m-purple);--line:var(--m-line);--serif:var(--m-serif);--sans:var(--m-sans);--display:var(--m-sans);--font-geist-sans:var(--m-sans);background:var(--m-paper);color:var(--m-ink);font-family:var(--m-sans)!important;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+html{scroll-padding-top:100px;scrollbar-color:#b0a4c5 var(--m-paper)}
+body[data-m0ve-page] :is(h1,h2){font-family:var(--m-serif)!important;font-weight:400!important;letter-spacing:-.035em!important;text-wrap:balance}
+body[data-m0ve-page] h1{line-height:1.04!important}
+body[data-m0ve-page] h2{line-height:1.12!important}
+body[data-m0ve-page] h3{letter-spacing:-.025em;text-wrap:balance}
+body[data-m0ve-page] :is(h1,h2) em{color:var(--m-purple)!important;font-family:var(--m-serif)!important}
+body[data-m0ve-page] :is(p,li){text-wrap:pretty}
+body[data-m0ve-page] :is(button,input,select,textarea){font-family:var(--m-sans)}
+body[data-m0ve-page] :is(input,select,textarea){accent-color:var(--m-purple);caret-color:var(--m-purple)}
+body[data-m0ve-page] :is(input,textarea)::placeholder{color:#64717b;opacity:1}
+body[data-m0ve-page] :is(a,button,input,select,textarea,summary):focus-visible{outline:3px solid var(--m-purple);outline-offset:4px}
+body[data-m0ve-page] ::selection{background:#ded3f4;color:var(--m-ink)}
+body[data-m0ve-page] :is(.button,.primary,.closing-cta){border-radius:10px;min-height:48px;font-size:14px;font-weight:600;white-space:normal}
+body[data-m0ve-page] :is(.button,.primary,.closing-cta):active{transform:translateY(1px)}
+body[data-m0ve-page] :is(.eyebrow,.section-tag,.section-label){font-family:var(--m-sans)!important;letter-spacing:.12em!important;font-size:11px!important;line-height:1.5!important}
+body[data-m0ve-page] :is(.micro,.section-note,.data-caption,.source-note,.chart-foot,.timeline-caption,.method p,.detail-disclaimer){font-size:12px!important;line-height:1.65!important}
+body[data-m0ve-page] :is(.hero-lead,.section-heading>p,.section-heading>div+div>p,.editorial-heading>p,.faq-layout>div>p,.explorer-copy>p:not(.eyebrow),.market-story>p,.faqs details p,.faq-list details p){font-size:16px!important;line-height:1.7!important;color:var(--m-muted)}
+body[data-m0ve-page] :is(.section-nav,.edit-nav,.street-nav){background:var(--m-paper);border-block:1px solid var(--m-line);z-index:20}
+body[data-m0ve-page] :is(.section-nav,.edit-nav,.street-nav) a{font-size:13px!important;min-height:48px;display:inline-flex;align-items:center;white-space:nowrap}
+body[data-m0ve-page] :is(.section-nav,.edit-nav,.street-nav) .wrap{overflow-x:auto;scrollbar-width:thin;gap:28px;min-height:60px}
+body[data-m0ve-page] :is(.section-nav,.edit-nav,.street-nav) .wrap>span{font-size:10px}
+body[data-m0ve-page] :is(.header,.site-header){position:relative!important;inset:auto!important;z-index:40!important;min-height:84px!important;height:auto!important;width:100%;padding:18px 4.5%!important;display:flex;align-items:center;justify-content:space-between;gap:24px;background:var(--m-paper)!important;color:var(--m-ink)!important;border-bottom:1px solid var(--m-line)!important;box-shadow:none!important;backdrop-filter:none!important}
+body[data-m0ve-page] :is(.header,.site-header):before{display:none}
+body[data-m0ve-page] :is(.header,.site-header) nav{font-family:var(--m-sans)!important;font-size:13px!important;gap:26px!important;color:var(--m-muted)!important}
+body[data-m0ve-page] :is(.header,.site-header) nav a{font-size:13px!important;line-height:1.4;white-space:nowrap;padding-block:10px}
+body[data-m0ve-page] :is(.header,.site-header) nav a:is(.active,.current,[aria-current=page]){color:var(--m-purple)!important}
+body[data-m0ve-page] :is(.header,.site-header) :is(.button,.header-cta){background:var(--m-purple)!important;border:0!important;color:#fff!important;border-radius:10px!important;min-height:44px!important;font-size:13px!important;padding:12px 18px!important;white-space:nowrap;box-shadow:none!important;gap:12px}
+body[data-m0ve-page] :is(.header,.site-header) .login{font-size:13px!important;color:var(--m-ink)!important}
+body[data-m0ve-page] :is(.wordmark,.studio-wordmark,.brand){font-family:var(--m-sans)!important;flex-shrink:0}
+.m0ve-logo{display:block!important;width:126px!important;height:auto!important;object-fit:contain!important;max-height:42px!important;filter:none!important;transform:none!important}
+.m0ve-menu{display:none;background:none;border:1px solid var(--m-line);border-radius:9px;min-width:44px;min-height:44px;align-items:center;justify-content:center;color:var(--m-ink)}
+.m0ve-menu svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7}
+.m0ve-skip{position:fixed;top:10px;left:16px;z-index:100;background:var(--m-ink);color:white;padding:12px 18px;transform:translateY(-180%);border-radius:8px}
+.m0ve-skip:focus{transform:none}
+body[data-m0ve-page] :is(.footer,.site-footer,footer){font-family:var(--m-sans)}
+body[data-m0ve-page] :is(.footer,.site-footer) nav{font-size:13px!important;line-height:1.8}
+body[data-m0ve-page] :is(.footer-bottom,.footer-bottom a){font-size:11px!important;line-height:1.7;letter-spacing:0}
+body[data-m0ve-page] :is(.hero-stat strong,.card-price,.value-result,.estimate-body,.main-stat,.comparison-values,.bar-value){font-variant-numeric:tabular-nums}
+@media(max-width:1100px){body[data-m0ve-page] :is(.header,.site-header){gap:16px}body[data-m0ve-page] :is(.header,.site-header) nav{gap:18px!important}}
+@media(max-width:900px){
+ body[data-m0ve-page] :is(.header,.site-header){min-height:76px!important;padding:14px 20px!important;gap:12px}
+ body[data-m0ve-page] :is(.header,.site-header) nav{display:none!important;position:absolute!important;top:100%!important;left:0!important;right:0!important;width:100%;padding:16px 24px 24px!important;background:var(--m-paper)!important;border-bottom:1px solid var(--m-line);box-shadow:0 18px 30px #15334512;flex-direction:column;align-items:flex-start;gap:6px!important}
+ body[data-m0ve-page] :is(.header,.site-header) nav:is(.open,[data-m0ve-open]){display:flex!important}
+ .m0ve-menu,body[data-m0ve-page] :is(.menu-toggle,.header .menu){display:flex!important;min-width:44px;min-height:44px;align-items:center;justify-content:center}
+ body[data-m0ve-page] :is(.header,.site-header) .login{display:none!important}
+ body[data-m0ve-page] :is(.header-actions,.header-end){gap:10px!important}
+ .m0ve-logo{width:112px!important}
+ body[data-m0ve-page] :is(.section-nav,.edit-nav,.street-nav) .wrap>span{display:none}
+}
+@media(max-width:600px){
+ body[data-m0ve-page] :is(input:not([type=range]):not([type=checkbox]):not([type=radio]),select,textarea){font-size:16px!important}
+ body[data-m0ve-page] :is(h1){font-size:clamp(38px,10.8vw,54px)!important;letter-spacing:-.03em!important}
+ body[data-m0ve-page] :is(.section-heading h2,.editorial-heading h2,.faq-layout h2,.closing h2){font-size:clamp(34px,9vw,44px)!important}
+ body[data-m0ve-page] :is(.wrap,.section-wrap,.section-shell){width:calc(100% - 40px)}
+ body[data-m0ve-page] :is(.header,.site-header) :is(.button,.header-cta){font-size:12px!important;padding:10px 12px!important}
+ body[data-m0ve-page] .footer-bottom{flex-wrap:wrap;gap:14px;padding-block:22px}
+ body[data-m0ve-page] :is(.section-nav,.edit-nav,.street-nav) .wrap{width:100%;padding-inline:20px;gap:22px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}body[data-m0ve-page] *,body[data-m0ve-page] *:before,body[data-m0ve-page] *:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* Homepage — a readable message and a usable search at every phase. */
+body[data-m0ve-page=home] .site-header{position:absolute!important;top:0!important;left:0!important;right:0!important;background:rgba(250,248,243,.96)!important}
+body[data-m0ve-page=home] .hero-copy{top:clamp(120px,17vh,168px)!important;left:5%!important;width:min(700px,70%)!important;gap:0!important}
+body[data-m0ve-page=home] .hero-copy .hero-headline.is-active{margin-top:0!important;max-height:none!important;overflow:visible!important;font-size:clamp(48px,5.4vw,80px)!important;line-height:1.06!important;transform:none!important}
+body[data-m0ve-page=home] .hero-copy .hero-headline:not(.is-active){display:none!important}
+body[data-m0ve-page=home] .hero-veil{opacity:1!important;background:linear-gradient(90deg,rgba(250,248,243,.97),rgba(250,248,243,.87) 36%,rgba(250,248,243,.12) 73%)!important}
+body[data-m0ve-page=home] .search-intro strong{font-size:14px!important;line-height:1.5}
+body[data-m0ve-page=home] .search-intro small{font-size:12px!important;line-height:1.5}
+body[data-m0ve-page=home] .search-tabs button strong{font-size:12px!important}
+body[data-m0ve-page=home] .search-entry .search-input input{font-size:14px!important}
+body[data-m0ve-page=home] :is(.section-heading>p,.copy-row p,.valuation-copy-intro p,.tool-featured-copy p,.tool-card p,.explorer-card>p,.explorer-overview-copy p,.selling-step p,.market-insight-copy p,.selling-visual-copy>p:not(.section-tag)){font-size:15px!important;line-height:1.7!important}
+body[data-m0ve-page=home] :is(.tool-card h3,.copy-row strong){font-size:21px!important;line-height:1.3}
+body[data-m0ve-page=home] :is(.tool-card a,.tool-featured-copy a,.market-insight-copy>span){font-size:13px!important;padding-block:10px!important}
+body[data-m0ve-page=home] .tool-card{min-height:220px!important}
+body[data-m0ve-page=home] .explorer-card{padding:26px!important;min-height:530px}
+body[data-m0ve-page=home] .explorer-card>p{min-height:0!important}
+body[data-m0ve-page=home] .explorer-chips i{font-size:11px!important;padding:6px 9px}
+body[data-m0ve-page=home] .explorer-benefits strong{font-size:14px!important}
+body[data-m0ve-page=home] .valuation-evidence small{font-size:12px!important;line-height:1.5}
+body[data-m0ve-page=home] .footer-link-grid a{font-size:13px!important;line-height:1.7}
+body[data-m0ve-page=home] .footer-brand-wide p{font-size:15px!important}
+@media(max-width:1180px){body[data-m0ve-page=home] .search-intro{display:none!important}body[data-m0ve-page=home] .search-card{grid-template-columns:minmax(0,1fr)!important;min-height:0!important;gap:10px!important}body[data-m0ve-page=home] .search-tabs{min-height:60px!important}body[data-m0ve-page=home] .search-entry{grid-column:auto!important}}
+@media(max-width:800px){
+ body[data-m0ve-page=home] .hero-stage{height:100svh!important;min-height:640px!important}
+ body[data-m0ve-page=home] .hero-copy{top:112px!important;left:22px!important;width:calc(100% - 44px)!important}
+ body[data-m0ve-page=home] .hero-copy .hero-headline.is-active{font-size:clamp(38px,8.6vw,62px)!important;max-width:12ch!important}
+ body[data-m0ve-page=home] .hero-veil{background:linear-gradient(180deg,#faf8f3 0%,#faf8f3ee 25%,#faf8f380 51%,#faf8f300 74%)!important}
+ body[data-m0ve-page=home] .search-card{bottom:14px!important;padding:10px!important}
+ body[data-m0ve-page=home] .search-tabs button strong{font-size:11px!important}
+ body[data-m0ve-page=home] .search-tabs button{min-height:60px!important}
+ body[data-m0ve-page=home] .tool-featured{height:auto!important;min-height:0!important}
+ body[data-m0ve-page=home] .tool-featured-copy{min-height:0!important}
+ body[data-m0ve-page=home] .tool-card{grid-template-columns:100px minmax(0,1fr)!important;gap:20px!important;padding:24px 0!important}
+ body[data-m0ve-page=home] .tool-card img{width:100px!important;height:100px!important}
+ body[data-m0ve-page=home] .selling-panel{grid-template-columns:1fr!important}
+ body[data-m0ve-page=home] .selling-step p{max-width:24ch}
+}
+@media(max-height:640px) and (min-width:801px){body[data-m0ve-page=home] .hero-copy{top:105px!important}body[data-m0ve-page=home] .hero-copy .hero-headline.is-active{font-size:46px!important;max-width:15ch}body[data-m0ve-page=home] .search-intro{display:none!important}body[data-m0ve-page=home] .search-card{grid-template-columns:1fr 1.2fr!important;min-height:100px!important}body[data-m0ve-page=home] .search-entry{grid-column:auto!important}}
+
+/* Valuation — choice clarity, narrative spacing and architectural evidence graphic. */
+body[data-m0ve-page=valuation] .hero-intro{padding-top:48px}
+body[data-m0ve-page=valuation] h1{font-size:clamp(50px,6.2vw,86px)}
+body[data-m0ve-page=valuation] .hero-deck{font-size:17px;line-height:1.7;max-width:48ch;margin:24px auto 0}
+body[data-m0ve-page=valuation] .valuation-options{gap:24px;margin-top:40px;max-width:1060px}
+body[data-m0ve-page=valuation] .valuation-card{border-radius:16px;padding:28px 30px;background:#eee8f8;box-shadow:none}
+body[data-m0ve-page=valuation] .valuation-card.detailed{background:#e6edef}
+body[data-m0ve-page=valuation] .valuation-card:before,body[data-m0ve-page=valuation] .valuation-card:after{display:none}
+body[data-m0ve-page=valuation] .card-top{font-size:11px;letter-spacing:.08em;color:#594577}
+body[data-m0ve-page=valuation] .time{font-size:12px;line-height:1.4}
+body[data-m0ve-page=valuation] .card-copy h2{font-family:var(--m-sans)!important;font-weight:600!important;font-size:25px;letter-spacing:-.025em!important}
+body[data-m0ve-page=valuation] .card-copy p{font-size:15px;line-height:1.7;color:var(--m-muted)}
+body[data-m0ve-page=valuation] .start-button{font-size:14px;font-weight:600;min-height:52px}
+body[data-m0ve-page=valuation] .hero-note{font-size:12px;line-height:1.7;color:var(--m-muted);margin-top:20px;position:relative;z-index:4}
+body[data-m0ve-page=valuation] :is(.chapter>p,.approach-title>p:last-child,.approach-steps p,.detail-text>p,.questions>div>p:last-child,.faq-list details p){font-size:16px;line-height:1.75;color:var(--m-muted)}
+body[data-m0ve-page=valuation] .approach-steps h3{font-size:21px;font-weight:600}
+body[data-m0ve-page=valuation] .chapter-buttons button{font-size:13px;min-height:44px}
+body[data-m0ve-page=valuation] .model-note{font-size:11px}
+body[data-m0ve-page=valuation] .faq-list summary{font-size:17px;line-height:1.5;padding-right:30px}
+body[data-m0ve-page=valuation] .detail-grid{gap:64px;align-items:center}
+body[data-m0ve-page=valuation] .detail-section{background:#f1edf6;padding-block:100px}
+.property-blueprint{margin:0;border:1px solid #c8bfd7;background:#fffdf9;border-radius:16px;padding:28px;min-width:0}
+.blueprint-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid var(--m-line);padding-bottom:16px;font-size:13px;color:var(--m-muted)}
+.blueprint-heading strong{font-size:17px;color:var(--m-ink);font-weight:600}
+.property-blueprint>svg{width:100%!important;height:auto!important;display:block;margin:18px 0;stroke-width:1.5}
+.property-blueprint svg text{font-family:var(--m-sans);fill:#536570;font-size:11px;stroke:none}
+.plan-highlight{fill:#eee8f8;transition:fill .25s}
+.property-blueprint[data-detail=energy] .plan-highlight{fill:#e2eee8}
+.property-blueprint[data-detail=condition] .plan-highlight{fill:#f4e5d7}
+.blueprint-controls{display:flex;flex-wrap:wrap;gap:8px}
+.blueprint-controls button{background:none;border:1px solid var(--m-line);border-radius:8px;min-height:44px;padding:9px 13px;font-size:13px}
+.blueprint-controls button[aria-pressed=true]{background:var(--m-ink);color:white;border-color:var(--m-ink)}
+.blueprint-caption{font-size:14px!important;line-height:1.7!important;min-height:72px;margin:18px 0 0!important;color:var(--m-muted)}
+.property-blueprint figcaption{font-size:11px;color:var(--m-muted);border-top:1px solid var(--m-line);padding-top:12px}
+body[data-m0ve-page=valuation] .text-button{font-size:14px;line-height:1.5;min-height:48px}
+body[data-m0ve-page=valuation] :is(.form-input,.form-select,.choice-label>span){font-size:16px}
+body[data-m0ve-page=valuation] :is(.form-intro,.field-label,.profile-summary dd){font-size:14px;line-height:1.6}
+@media(max-width:900px){body[data-m0ve-page=valuation] .section-wrap{width:calc(100% - 40px)}body[data-m0ve-page=valuation] .detail-grid{grid-template-columns:1fr;gap:36px}body[data-m0ve-page=valuation] .property-blueprint{max-width:620px;width:100%;margin:auto}body[data-m0ve-page=valuation] .motion-button{display:none}}
+@media(max-width:600px){body[data-m0ve-page=valuation] .hero{padding-inline:20px}body[data-m0ve-page=valuation] .hero-intro{padding-top:32px}body[data-m0ve-page=valuation] .hero-meta{display:none}body[data-m0ve-page=valuation] .valuation-card{padding:24px}body[data-m0ve-page=valuation] .card-top{flex-wrap:wrap;gap:8px}body[data-m0ve-page=valuation] .time{margin-left:auto}body[data-m0ve-page=valuation] .world-copy{top:12%;max-width:none;width:calc(100% - 40px)}body[data-m0ve-page=valuation] .chapter h3{font-size:36px;max-width:15ch;margin:12px 0}body[data-m0ve-page=valuation] .chapter>p{font-size:15px;max-width:34ch}.property-blueprint{padding:20px}.blueprint-heading{flex-wrap:wrap;gap:5px}.blueprint-caption{min-height:96px}}
+
+/* Local atlas family — readable evidence, consistent controls, retained illustrations. */
+body[data-m0ve-page^=atlas] :is(.hero-copy h1,.desk-top h1,.fold-heading h1,.edit-intro h1){font-size:clamp(48px,5.6vw,80px);color:var(--m-ink)}
+body[data-m0ve-page^=atlas] :is(.hero-top,.fold-meta,.desk-meta,.edit-top){font-size:12px!important;min-height:56px;height:auto;padding-block:16px}
+body[data-m0ve-page^=atlas] :is(.hero-top nav,.fold-meta nav,.desk-meta nav,.edit-top nav){font-size:12px!important;flex-wrap:wrap}
+body[data-m0ve-page^=atlas] :is(.hero-stats){background:var(--m-ink)}
+body[data-m0ve-page^=atlas] :is(.hero-stat>span,.hero-stat small,.stats-intro>a,.place-card>p,.place-card a){font-size:12px!important;line-height:1.5}
+body[data-m0ve-page^=atlas] .hero-stat strong{font-size:clamp(28px,3vw,44px)}
+body[data-m0ve-page^=atlas] :is(.place-card,.chart-card,.value-card,.comparison-card,.budget-card){border-radius:14px}
+body[data-m0ve-page^=atlas] :is(.segmented button,.chart-years button,.metric-controls button,.detail-tabs button,.desk-tabs button,.local-tabs button,.area-choices button,.home-selector button){font-size:13px!important;min-height:44px;padding:10px 14px!important;line-height:1.4}
+body[data-m0ve-page^=atlas] :is(.type-meta,.type-content>span,.type-content button,.district-row,.town-card small,.town-card button,.range-labels,.field-notes,.data-table,.timeline-caption){font-size:12px!important;line-height:1.55}
+body[data-m0ve-page^=atlas] :is(.type-content button,.town-card button,.map-tools>button,.round){min-height:44px}
+body[data-m0ve-page^=atlas] :is(.type-grid,.nearby-grid){gap:22px}
+body[data-m0ve-page^=atlas] .house-art{height:165px}
+body[data-m0ve-page^=atlas] .type-content{padding:24px}
+body[data-m0ve-page^=atlas] .type-content>strong{font-size:36px}
+body[data-m0ve-page^=atlas] .type-content h3{font-size:26px}
+body[data-m0ve-page^=atlas] :is(.district-row,.postcode-row){min-height:70px}
+body[data-m0ve-page^=atlas] :is(.text-link,.closing-secondary){font-size:14px!important;line-height:1.5;min-height:44px}
+body[data-m0ve-page^=atlas] .faqs summary{font-size:16px!important;line-height:1.55;padding-block:23px}
+body[data-m0ve-page=atlas-city] .hero{min-height:900px;height:900px}
+body[data-m0ve-page=atlas-city] .hero-copy{max-width:600px;padding-top:50px}
+body[data-m0ve-page=atlas-city] .hero-lead{max-width:38ch}
+body[data-m0ve-page=atlas-city] .hero-stats{padding:26px;grid-template-columns:1.15fr 1fr 1fr 1fr;gap:22px}
+body[data-m0ve-page=atlas-city] .hero-stat{padding-left:22px}
+body[data-m0ve-page=atlas-city] .place-card{width:310px;padding:22px}
+body[data-m0ve-page=atlas-city] .chart-foot{flex-wrap:wrap;gap:12px}
+body[data-m0ve-page=atlas-city] .district-row{grid-template-columns:48px minmax(0,1fr) 100px 28px;gap:15px}
+body[data-m0ve-page=atlas-city] .street-link p{font-size:14px;line-height:1.6}
+body[data-m0ve-page=atlas-street] .fold-heading>p:last-child{font-size:15px;line-height:1.6;margin-top:20px}
+body[data-m0ve-page=atlas-street] .fold-bottom{flex-wrap:wrap;gap:18px;padding-block:24px}
+body[data-m0ve-page=atlas-street] :is(.dossier-intro>p,.detail-note p,.evidence-reading p,.context-card p,.notebook-intro>p,.checklist label,.notes-label){font-size:15px!important;line-height:1.7}
+body[data-m0ve-page=atlas-street] :is(.estimate-meta,.sheet-top,.sheet-bottom,.context-footnote,.notebook-subtitle){font-size:12px!important;line-height:1.6}
+body[data-m0ve-page=atlas-street] .detail-tabs{flex-wrap:wrap;gap:8px}
+body[data-m0ve-page=atlas-street] .context-grid{gap:24px}
+body[data-m0ve-page=atlas-street] .notebook-paper{padding:32px;border-radius:12px}
+body[data-m0ve-page=atlas-cv5] .desk{height:auto;min-height:900px;max-height:none;overflow:visible}
+body[data-m0ve-page=atlas-cv5] .desk-stage{min-height:440px}
+body[data-m0ve-page=atlas-cv5] .desk-top{padding-block:32px;gap:36px}
+body[data-m0ve-page=atlas-cv5] .desk-top>p{font-size:15px;max-width:30ch;line-height:1.7}
+body[data-m0ve-page=atlas-cv5] :is(.desk-under,.desk-note){font-size:11px;line-height:1.6;flex-wrap:wrap;gap:14px;padding-block:16px}
+body[data-m0ve-page=atlas-cv5] .desk-bottom{padding-block:24px;gap:24px}
+body[data-m0ve-page=atlas-cv5] .desk-bottom>p{font-size:15px;line-height:1.7}
+body[data-m0ve-page=atlas-cv5] :is(.district-stats p,.local-guide>p,.comparison-card p,.budget-layout>div>p,.home-guide-panel p,.scale-card p){font-size:15px!important;line-height:1.7}
+body[data-m0ve-page=atlas-cv5] .compare-table{min-width:0}
+body[data-m0ve-page=atlas-cv5] .postcode-row{font-size:14px;gap:16px}
+body[data-m0ve-page=atlas-cv4] .edit-intro{padding-block:40px;gap:32px}
+body[data-m0ve-page=atlas-cv4] .edit-intro>div{padding:0;max-width:35ch}
+body[data-m0ve-page=atlas-cv4] .edit-intro p{font-size:16px;line-height:1.7}
+body[data-m0ve-page=atlas-cv4] .postcode-stage{height:clamp(420px,43vw,680px)}
+body[data-m0ve-page=atlas-cv4] :is(.market-margin p,.area-story p,.home-detail p,.street-copy p,.reading-notes p){font-size:15px!important;line-height:1.7}
+body[data-m0ve-page=atlas-cv4] :is(.bar-value,.year-bar>span:last-child){font-size:12px!important}
+body[data-m0ve-page=atlas-cv4] .timeline-caption{display:flex;flex-wrap:wrap;gap:12px}
+body[data-m0ve-page=atlas-cv4] .area-choices{flex-wrap:wrap;gap:8px}
+@media(max-width:900px){body[data-m0ve-page^=atlas] :is(.hero-top .edition,.desk-edition,.edit-top>span,.fold-meta>a){display:none}body[data-m0ve-page^=atlas] :is(.type-grid,.nearby-grid){grid-template-columns:repeat(2,minmax(0,1fr))}body[data-m0ve-page=atlas-city] .hero-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}body[data-m0ve-page=atlas-city] .stats-intro{grid-column:1/-1}body[data-m0ve-page=atlas-city] .hero-stat{padding-left:12px}body[data-m0ve-page=atlas-city] .hero-stat:nth-child(2){padding-left:0}body[data-m0ve-page=atlas-cv5] .desk-bottom{flex-wrap:wrap}}
+@media(max-width:600px){
+ body[data-m0ve-page^=atlas] :is(.desk-rail,.street-rail,.postcode-rail){display:none!important}
+ body[data-m0ve-page^=atlas] :is(.desk,.fold-shell,.postcode-hero){display:block!important}
+ body[data-m0ve-page^=atlas] :is(.desk-content,.fold-hero){padding-inline:20px}
+ body[data-m0ve-page^=atlas] :is(.type-grid,.nearby-grid,.context-grid){grid-template-columns:1fr!important;gap:18px}
+ body[data-m0ve-page^=atlas] .type-card{display:grid;grid-template-columns:115px minmax(0,1fr);align-items:center}
+ body[data-m0ve-page^=atlas] .house-art{height:150px}
+ body[data-m0ve-page^=atlas] .type-content{padding:22px 18px}
+ body[data-m0ve-page^=atlas] .type-meta{flex-wrap:wrap;gap:8px}
+ body[data-m0ve-page=atlas-city] .hero{height:auto;min-height:1040px}
+ body[data-m0ve-page=atlas-city] .hero-copy{padding-top:28px}
+ body[data-m0ve-page=atlas-city] .hero-stats{grid-template-columns:1fr;gap:16px;padding:24px}
+ body[data-m0ve-page=atlas-city] .hero-stat{display:grid;grid-template-columns:1fr 1fr;gap:3px 16px;padding:12px 0 0;border:0;border-top:1px solid #ffffff35}
+ body[data-m0ve-page=atlas-city] .hero-stat strong{grid-row:1/3;grid-column:2;text-align:right;font-size:32px;margin:0}
+ body[data-m0ve-page=atlas-city] .place-card{bottom:390px;right:20px;width:270px}
+ body[data-m0ve-page=atlas-city] .map-tools{bottom:350px}
+ body[data-m0ve-page=atlas-city] .market-story{display:block}
+ body[data-m0ve-page=atlas-city] .market-story>p{margin-block:18px}
+ body[data-m0ve-page=atlas-city] .growth{margin:20px 0}
+ body[data-m0ve-page=atlas-city] .district-row{grid-template-columns:42px minmax(0,1fr) 84px 20px;gap:10px}
+ body[data-m0ve-page=atlas-street] .paper-atlas{width:100%!important;max-width:none!important}
+ body[data-m0ve-page=atlas-street] .fold-theatre{padding-block:35px}
+ body[data-m0ve-page=atlas-street] .fold-heading{text-align:left}
+ body[data-m0ve-page=atlas-street] .notebook-paper{padding:22px}
+ body[data-m0ve-page=atlas-cv5] .desk-top{display:block}
+ body[data-m0ve-page=atlas-cv5] .desk-top>p{margin-top:20px;max-width:38ch}
+ body[data-m0ve-page=atlas-cv5] .desk-stage{min-height:360px}
+ body[data-m0ve-page=atlas-cv5] .desk-bottom{display:grid;grid-template-columns:1fr}
+ body[data-m0ve-page=atlas-cv5] .desk-tabs{display:flex;flex-wrap:wrap}
+ body[data-m0ve-page=atlas-cv4] .edit-intro{display:block;padding:26px 20px}
+ body[data-m0ve-page=atlas-cv4] .edit-intro>div{margin-top:22px}
+ body[data-m0ve-page=atlas-cv4] .postcode-stage{height:380px}
+ body[data-m0ve-page=atlas-cv4] .bar-chart{gap:6px}
+ body[data-m0ve-page=atlas-cv4] .bar-value{font-size:10px!important}
+}
+
+/* Generic street story — keep its cinematic character without tiny captions. */
+body[data-m0ve-page=street-generic]{--mint:#6945c5;background:var(--m-paper)!important;color:var(--m-ink)!important}
+body[data-m0ve-page=street-generic] .cinema-pin{background:#f3efe9}
+body[data-m0ve-page=street-generic] .cinema-copy h1{font-size:clamp(50px,6vw,84px)!important;max-width:700px}
+body[data-m0ve-page=street-generic] .cinema-chapter h2{font-size:clamp(38px,4.2vw,58px)!important}
+body[data-m0ve-page=street-generic] :is(.cinema-copy .cinema-deck,.cinema-chapter p:not(.eyebrow):not(.chapter-number),.intro-story>p:not(.eyebrow),.number-card p,.evidence-reader p,.home-profile p,.faq-grid p,.context-grid p){font-size:16px!important;line-height:1.7!important;color:var(--m-muted)!important}
+body[data-m0ve-page=street-generic] :is(.cinema-top,.cinema-disclaimer,.chapter-control,.robot-guide p,.guide-caption,.number-bottom,.profile-details,.reader-index){font-size:12px!important;line-height:1.6}
+body[data-m0ve-page=street-generic] .chapter-control{min-height:44px;padding-block:10px}
+body[data-m0ve-page=street-generic] .intelligence-band{background:var(--m-ink)!important;color:#fffdf9}
+body[data-m0ve-page=street-generic] .intelligence-copy :is(h2,h3){color:#fffdf9}
+body[data-m0ve-page=street-generic] .intelligence-copy h2 em{color:#d4c4f2!important}
+body[data-m0ve-page=street-generic] .intelligence-copy :is(p,li p){font-size:15px!important;line-height:1.7!important;color:#e1e8ed!important}
+body[data-m0ve-page=street-generic] .intelligence-copy .button{background:#eee8f8!important;color:var(--m-ink)!important}
+body[data-m0ve-page=street-generic] :is(.street-search p,.method-list p,.faq-grid summary){font-size:16px!important;line-height:1.7}
+body[data-m0ve-page=street-generic] .profile-details{gap:16px;flex-wrap:wrap}
+@media(max-width:760px){body[data-m0ve-page=street-generic] .cinema-copy h1{font-size:48px!important;max-width:11ch}body[data-m0ve-page=street-generic] .cinema-chapter h2{font-size:38px!important}body[data-m0ve-page=street-generic] .cinema-chapter{width:calc(100% - 40px)!important;max-width:420px}body[data-m0ve-page=street-generic] .cinema-bottom{gap:10px;flex-wrap:wrap}body[data-m0ve-page=street-generic] .chapter-control{font-size:12px!important}body[data-m0ve-page=street-generic] .cinema-disclaimer{font-size:10px!important}}
+
+/* Listings — strong price hierarchy, calm surfaces and legible comparison data. */
+body[data-m0ve-page=homes] .header-shell{background:var(--m-paper);border:0}
+body[data-m0ve-page=homes] .results-heading h1{font-size:clamp(48px,5.5vw,78px)!important;color:var(--m-ink)}
+body[data-m0ve-page=homes] .results-heading h1>span{color:var(--m-purple)!important}
+body[data-m0ve-page=homes] .heading-deck>p{font-size:16px!important;line-height:1.7!important;color:var(--m-muted)!important}
+body[data-m0ve-page=homes] .heading-photo{border-radius:16px!important}
+body[data-m0ve-page=homes] :is(.toolbar-inner,.property-card,.detail-price-panel){background:#fffdf9!important;border-color:var(--m-line)!important;border-radius:12px!important;box-shadow:none!important}
+body[data-m0ve-page=homes] .toolbar-inner label>span{font-size:12px!important;line-height:1.6;color:var(--m-muted)!important}
+body[data-m0ve-page=homes] .toolbar-inner :is(input,select){font-size:14px!important;color:var(--m-ink)!important;min-height:42px}
+body[data-m0ve-page=homes] :is(.toolbar-filter,.primary,.view-listing){background:var(--m-purple)!important;color:#fff!important;border-color:var(--m-purple)!important;font-size:13px!important;min-height:44px}
+body[data-m0ve-page=homes] :is(.card-info h2,.card-info h3,.card-location){font-family:var(--m-sans)!important;font-size:20px!important;font-weight:600!important;color:var(--m-ink)!important;line-height:1.45!important;letter-spacing:-.02em!important}
+body[data-m0ve-page=homes] .card-price{font-family:var(--m-sans)!important;font-size:32px!important;font-weight:600!important;letter-spacing:-.035em!important;color:var(--m-ink)!important}
+body[data-m0ve-page=homes] :is(.card-facts,.source-estimate,.agent-row,.eligibility,.market-comparison,.card-actions button,.result-controls,.results-range,.map-caption,.save-search,.collection-heading,.detail-source){font-size:13px!important;line-height:1.6!important;color:var(--m-muted)!important}
+body[data-m0ve-page=homes] :is(.asking-label,.agent-date,.card-overline,.price-label){font-size:11px!important;color:var(--m-muted)!important;letter-spacing:.08em!important}
+body[data-m0ve-page=homes] .source-estimate strong{font-size:15px;color:var(--m-ink)}
+body[data-m0ve-page=homes] :is(.property-card,.card-info){min-width:0}
+body[data-m0ve-page=homes] .card-info{padding:25px!important}
+body[data-m0ve-page=homes] :is(.image-save,.photo-nav,.gallery-arrow,.dialog-close,.save-home){min-width:44px!important;min-height:44px!important}
+body[data-m0ve-page=homes] .detail-title h2{font-size:38px!important;color:var(--m-ink)!important}
+body[data-m0ve-page=homes] :is(.detail-title p,.detail-highlights .features li,.discount-note,.detail-actions>p,.detail-agent-id strong,.detail-agent>a){font-size:14px!important;line-height:1.7!important;color:var(--m-muted)!important}
+body[data-m0ve-page=homes] .detail-facts strong{font-size:14px!important;color:var(--m-ink)!important}
+body[data-m0ve-page=homes] .detail-facts small{font-size:12px!important;color:var(--m-muted)!important}
+body[data-m0ve-page=homes] .detail-price{color:var(--m-ink)!important}
+body[data-m0ve-page=homes] :is(.detail-estimate,.detail-estimate .market-comparison,.comparison th,.comparison td){font-size:13px!important;line-height:1.6}
+body[data-m0ve-page=homes] .comparison{overflow-x:auto}
+body[data-m0ve-page=homes] .saved-nav{font-size:13px;min-height:44px;color:var(--m-purple);flex-shrink:0}
+@media(max-width:1100px){body[data-m0ve-page=homes] .header nav{gap:14px!important}body[data-m0ve-page=homes] .header nav a{font-size:12px!important}body[data-m0ve-page=homes] .toolbar-inner{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px;padding:22px}body[data-m0ve-page=homes] .toolbar-location{grid-column:span 2}}
+@media(max-width:760px){body[data-m0ve-page=homes] .toolbar-inner{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px;padding:20px}body[data-m0ve-page=homes] .toolbar-location{grid-column:1/-1}body[data-m0ve-page=homes] .toolbar-inner label{border:0!important;min-width:0;padding:0!important}body[data-m0ve-page=homes] .toolbar-filter{grid-column:1/-1}body[data-m0ve-page=homes] .results-heading{gap:24px}body[data-m0ve-page=homes] .card-info{padding:22px!important}body[data-m0ve-page=homes] .detail-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}body[data-m0ve-page=homes] .detail-facts>span{border:0;padding:0}body[data-m0ve-page=homes] .detail-estimate{flex-wrap:wrap}body[data-m0ve-page=homes] .detail-title h2{font-size:30px!important}body[data-m0ve-page=homes] .result-controls{flex-wrap:wrap;gap:12px}body[data-m0ve-page=homes] .compare-tray{width:calc(100% - 24px);flex-wrap:wrap;gap:12px}body[data-m0ve-page=homes] .header{flex-wrap:nowrap}body[data-m0ve-page=homes] .saved-nav{margin-left:auto}}
+
+body[data-m0ve-page=home] .selling-visual h2 em{color:#d4c4f2!important}
