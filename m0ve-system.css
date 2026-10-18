@@ -278,3 +278,40 @@ body[data-m0ve-page=homes] .saved-nav{font-size:13px;min-height:44px;color:var(-
 @media(max-width:760px){body[data-m0ve-page=homes] .toolbar-inner{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px;padding:20px}body[data-m0ve-page=homes] .toolbar-location{grid-column:1/-1}body[data-m0ve-page=homes] .toolbar-inner label{border:0!important;min-width:0;padding:0!important}body[data-m0ve-page=homes] .toolbar-filter{grid-column:1/-1}body[data-m0ve-page=homes] .results-heading{gap:24px}body[data-m0ve-page=homes] .card-info{padding:22px!important}body[data-m0ve-page=homes] .detail-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}body[data-m0ve-page=homes] .detail-facts>span{border:0;padding:0}body[data-m0ve-page=homes] .detail-estimate{flex-wrap:wrap}body[data-m0ve-page=homes] .detail-title h2{font-size:30px!important}body[data-m0ve-page=homes] .result-controls{flex-wrap:wrap;gap:12px}body[data-m0ve-page=homes] .compare-tray{width:calc(100% - 24px);flex-wrap:wrap;gap:12px}body[data-m0ve-page=homes] .header{flex-wrap:nowrap}body[data-m0ve-page=homes] .saved-nav{margin-left:auto}}
 
 body[data-m0ve-page=home] .selling-visual h2 em{color:#d4c4f2!important}
+
+/* Interaction polish: quiet surfaces, clear state, one motion rhythm. */
+body[data-m0ve-page]{--m-duration:280ms;--m-ease:cubic-bezier(.22,1,.36,1);caret-color:var(--m-purple)}
+body[data-m0ve-page] ::selection{background:#6945c526;color:var(--m-ink)}
+body[data-m0ve-page] :is(button,a,input,select,textarea){-webkit-tap-highlight-color:transparent}
+body[data-m0ve-page] :is(button,a.button,[role=tab],summary){transition:background-color 180ms ease,color 180ms ease,border-color 180ms ease,box-shadow 180ms ease}
+body[data-m0ve-page] summary{border:0!important;border-radius:10px;padding-inline:16px!important}
+body[data-m0ve-page] :is(.faqs,.faq-list) details{border:0!important;margin-bottom:8px;border-radius:12px;background:#15334504}
+body[data-m0ve-page] :is(.faqs,.faq-list) details[open]{background:#6945c508}
+body[data-m0ve-page] :is(.faqs,.faq-list) details>p{padding-inline:16px}
+body[data-m0ve-page] summary:hover{background:#6945c509}
+body[data-m0ve-page] summary>span:last-child{transition:transform var(--m-duration) var(--m-ease)}
+body[data-m0ve-page] :is(.section-nav,.edit-nav,.street-nav){border-top:0!important;border-bottom-color:#15334514!important}
+body[data-m0ve-page] :is(.fold-meta,.desk-meta,.edit-top,.dossier-heading,.details-heading,.fold-bottom,.desk-bottom,.method,.footer-bottom){border-top:0!important;border-bottom:0!important}
+body[data-m0ve-page] :is(.street-rail,.desk-rail,.postcode-rail){border-right:0!important}
+body[data-m0ve-page] :is(.section-heading,.dossier-heading,.details-heading)>.eyebrow{display:none}
+body[data-m0ve-page] :is(.context-card,.town-card){box-shadow:none}
+body[data-m0ve-page=atlas-street] .fold-bottom{padding-top:0;gap:28px;padding-bottom:32px}
+body[data-m0ve-page=atlas-street] .fold-theatre{padding-bottom:28px}
+body[data-m0ve-page=atlas-street] :is(.atlas-edition,.detail-crosshair,.detail-scale,.source-stamp){display:none}
+body[data-m0ve-page=atlas-street] .fold-heading>.eyebrow{display:none}
+body[data-m0ve-page=atlas-street] .evidence-options>button{border:0!important;border-radius:12px;margin-bottom:8px;padding:20px!important;background:#15334504}
+body[data-m0ve-page=atlas-street] .evidence-options>button[aria-pressed=true]{background:#6945c510}
+body[data-m0ve-page=atlas-street] .notebook-paper:before{display:none}
+body[data-m0ve-page=atlas-street] .checklist>label{border-top:0;padding-block:16px}
+body[data-m0ve-page=atlas-street] .notebook-paper-head{border-bottom:0}
+body[data-m0ve-page=home] .tool-card{border-bottom-color:#15334512!important}
+body[data-m0ve-page=valuation] .property-blueprint-header{border-bottom:0}
+@keyframes m0ve-dialog-in{from{opacity:0;transform:translateY(10px) scale(.99)}to{opacity:1;transform:none}}
+@keyframes m0ve-image-in{from{opacity:.2}to{opacity:1}}
+@media(prefers-reduced-motion:no-preference){
+ body[data-m0ve-page] dialog[open]{animation:m0ve-dialog-in 300ms var(--m-ease)}
+ body[data-m0ve-page] dialog[open]::backdrop{animation:m0ve-image-in 220ms ease}
+ body[data-m0ve-page=homes] .detail-main{animation:m0ve-image-in 280ms ease}
+ body[data-m0ve-page] :is(.header,.site-header) nav:is(.open,[data-m0ve-open]){animation:m0ve-dialog-in 220ms var(--m-ease)}
+}
+@media(prefers-reduced-motion:reduce){body[data-m0ve-page] :is(button,a,summary,dialog){transition:none!important;animation:none!important}}

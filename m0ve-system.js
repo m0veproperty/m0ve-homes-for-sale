@@ -36,3 +36,55 @@
     }));
   }
 })();
+
+// Restrained, interruptible motion for content changes and native disclosures.
+(() => {
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const running = new Map();
+  const ease = 'cubic-bezier(.22,1,.36,1)';
+  function reveal(el) {
+    if (reduced.matches || !el.getClientRects().length || !el.animate) return;
+    running.get(el)?.cancel();
+    const animation = el.animate([{opacity:.18,transform:'translateY(5px)'},{opacity:1,transform:'translateY(0)'}],{duration:280,easing:ease});
+    running.set(el,animation);
+    animation.onfinish = () => running.delete(el);
+  }
+  // Observe only changing content regions; leave controls and focus in place.
+  const regions = document.querySelectorAll('[role="tabpanel"],.detail-note,.evidence-reading,.blueprint-caption,.place-picker,.place-card>p,#local-copy,#home-guide-copy,.area-story,.world-copy,.comparison-result,.district-feature,.home-detail,#form-content,#chart-value,#area-description');
+  regions.forEach(el => {
+    new MutationObserver(() => reveal(el)).observe(el,{childList:true,subtree:true,characterData:true,attributes:el.matches('[role="tabpanel"]'),attributeFilter:['hidden','aria-hidden']});
+  });
+  const disclosureState = new WeakMap();
+  document.querySelectorAll('details').forEach(el => {
+    const summary = el.querySelector(':scope > summary');
+    if (!summary) return;
+    summary.addEventListener('click', event => {
+      if (event.target.closest('a,button,input,select,textarea') || reduced.matches || !el.animate) return;
+      event.preventDefault();
+      const prior = disclosureState.get(el);
+      const opening = prior ? !prior.opening : !el.open;
+      const start = el.getBoundingClientRect().height;
+      prior?.animation.cancel();
+      el.style.height = '';
+      el.style.overflow = 'hidden';
+      el.open = true;
+      const expanded = el.getBoundingClientRect().height;
+      const style = getComputedStyle(el);
+      const collapsed = summary.getBoundingClientRect().height + parseFloat(style.paddingTop) + parseFloat(style.paddingBottom) + parseFloat(style.borderTopWidth) + parseFloat(style.borderBottomWidth);
+      const animation = el.animate({height:[`${start}px`,`${opening ? expanded : collapsed}px`]}, {duration:300,easing:ease});
+      disclosureState.set(el,{animation,opening});
+      running.set(el,animation);
+      const finish = () => {
+        el.open = opening;
+        el.style.height = '';
+        el.style.overflow = '';
+        disclosureState.delete(el);
+        running.delete(el);
+      };
+      animation.onfinish = finish;
+      // A preference change should settle to the requested state immediately.
+      animation.oncancel = () => { if (reduced.matches) finish(); };
+    });
+  });
+  reduced.addEventListener('change', e => { if(e.matches) { running.forEach(animation=>animation.cancel()); running.clear(); } });
+})();

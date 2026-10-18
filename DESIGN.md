@@ -77,3 +77,7 @@ The shared logo is served from `m0ve-home-page`; Manrope is served from `m0ve-ho
 - Do keep keyboard focus visible and respect reduced-motion preferences.
 - Don't treat the shared type sizes as universal: small labels and chart annotations retain documented exceptions.
 - Don't substitute decorative shadows for the existing paper, border and tonal hierarchy.
+
+### Interaction refinement
+
+Content changes use an interruptible 280ms fade and 5px settle. Native disclosures expand and collapse over 300ms; rapid toggles reverse from the current height. Reduced-motion disables these effects. Decorative section dividers are reduced; data-table structure and control boundaries remain.
